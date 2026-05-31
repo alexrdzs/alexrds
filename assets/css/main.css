@@ -1898,6 +1898,237 @@ h3.lght {
 }
 
 /* =================================================
+   HOME REVAMP STYLES
+   ================================================= */
+
+/* Brand/credentials ticker */
+.home-ticker {
+  overflow: hidden;
+  background: #000;
+  padding: 13px 0;
+}
+
+.ticker-inner {
+  display: inline-flex;
+  animation: ticker-scroll 32s linear infinite;
+  white-space: nowrap;
+}
+
+.home-ticker:hover .ticker-inner {
+  animation-play-state: paused;
+}
+
+.ticker-inner span {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  padding: 0 22px;
+  flex-shrink: 0;
+}
+
+.ticker-inner .ticker-brand {
+  color: rgba(255,255,255,0.9);
+}
+
+.ticker-inner .ticker-accent {
+  color: #ff7210;
+  padding: 0 4px;
+}
+
+@keyframes ticker-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* Hero subtitle elements (inside heading-text-front) */
+.hero-sub {
+  margin-top: 30px;
+}
+
+.hero-sub .hero-name {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #000;
+  display: block;
+  -webkit-text-stroke: 0px;
+}
+
+.hero-sub .hero-tagline {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #999;
+  display: block;
+  margin-top: 10px;
+  -webkit-text-stroke: 0px;
+}
+
+/* Featured case study cards on homepage */
+.home-featured {
+  padding: 80px 0 0;
+}
+
+.home-featured .featured-label {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 10px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #ff7210;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 40px;
+}
+
+/* Project index list */
+.project-index {
+  padding: 60px 0 80px;
+}
+
+.project-index-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-bottom: 18px;
+  border-bottom: 2px solid #000;
+  margin-bottom: 0;
+}
+
+.project-index-header .pih-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-size: 34px;
+  text-transform: uppercase;
+  color: #000;
+  margin: 0;
+}
+
+.project-index-header .pih-title span {
+  color: transparent;
+  -webkit-text-stroke: 1px #000;
+}
+
+.see-all-cta {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #ff7210;
+  text-decoration: none;
+  transition: opacity 0.25s ease;
+}
+
+.see-all-cta:hover {
+  opacity: 0.7;
+}
+
+.project-list-row {
+  display: flex;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.07);
+  text-decoration: none;
+  cursor: none;
+  position: relative;
+}
+
+.project-list-row::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #ff7210;
+  transition: width 0.45s ease;
+}
+
+.project-list-row:hover::after {
+  width: 100%;
+}
+
+.project-list-row:hover .plr-title {
+  color: #ff7210;
+}
+
+.project-list-row:hover .plr-num {
+  color: #ff7210;
+}
+
+.plr-num {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  color: #ddd;
+  letter-spacing: 2px;
+  width: 34px;
+  flex-shrink: 0;
+  transition: color 0.3s ease;
+}
+
+.plr-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-size: 17px;
+  color: #000;
+  flex: 1;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+  padding-right: 12px;
+}
+
+.plr-client {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 11px;
+  color: #999;
+  width: 90px;
+  flex-shrink: 0;
+  text-align: right;
+}
+
+.plr-cat {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 10px;
+  color: #bbb;
+  letter-spacing: 0.5px;
+  width: 150px;
+  flex-shrink: 0;
+  text-align: right;
+}
+
+.plr-year {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  color: #ccc;
+  letter-spacing: 2px;
+  width: 56px;
+  flex-shrink: 0;
+  text-align: right;
+}
+
+/* About section - revamped copy container */
+.abt-text h4 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.35;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.abt-text h4 span {
+  color: #ff7210;
+}
+
+/* =================================================
    WORK REVAMP — Editorial Portfolio Styles
    ================================================= */
 
