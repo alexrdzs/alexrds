@@ -156,14 +156,11 @@
     font-size: 14px;
   }
   .main-head h1 {
-    font-size: 40px;
+    font-size: 50px;
   }
   .menu__toggler,
   .menus {
     display: none;
-  }
-  .main-head h1 {
-    font-size: 50px;
   }
   section {
     padding: 70px 0;
@@ -247,4 +244,50 @@
 }
 
 /* // Large devices (desktops, less than 1200px) RETINA */
+
+/* =============================================
+   RESPONSIVE FIXES FOR PORTFOLIO ADDITIONS
+   ============================================= */
+
+/* Tablet and below */
+@media (max-width: 991.98px) {
+  .home-hero-title { font-size: 42px; }
+  .project-title   { font-size: 52px; }
+  .project-title-wide { font-size: 50px; }
+  .pp-title        { font-size: 58px; }
+  .wg-cell-title   { font-size: 18px; }
+  .brief-text      { font-size: 18px; }
+}
+
+/* Mobile */
+@media (max-width: 767.98px) {
+  .home-hero-title { font-size: 32px; }
+  .project-title   { font-size: 40px; letter-spacing: -1px; }
+  .project-title-wide { font-size: 38px; letter-spacing: -1px; }
+  .pp-title        { font-size: 44px; }
+  .wg-grid         { grid-template-columns: 1fr; }
+  .wg-cell-media   { height: 50vw; min-height: 240px; }
+  .home-work-intro { padding: 60px 0 0; }
+  .hwi-statement   { font-size: 16px; }
+  .pp-info         { flex-direction: column; gap: 10px; }
+  .pp-right        { text-align: left; }
+  .img-pair        { grid-template-columns: 1fr; }
+  .img-trio        { grid-template-columns: 1fr; }
+}
+
+/* Small phones */
+@media (max-width: 575.98px) {
+  .home-hero-title { font-size: 26px; }
+  .project-title   { font-size: 32px; }
+  .project-title-wide { font-size: 30px; }
+  .pp-title        { font-size: 36px; }
+  .hero-sub .hero-name  { font-size: 11px; }
+  .hero-sub .hero-tagline { font-size: 10px; }
+  .wg-cell-info    { padding: 16px 18px; }
+  .wg-cell-title   { font-size: 16px; }
+  .project-meta-strip .meta-col { padding: 10px 20px; }
+  .brief-text      { font-size: 16px; }
+  .project-credits-minimal { padding: 40px 24px; }
+}
+
 /*# sourceMappingURL=responsive.css.map */

@@ -1018,6 +1018,50 @@ h1.title {
   font-size: 90px;
 }
 
+/* Homepage hero title — responsive via CSS, not inline style */
+.home-hero-title {
+  font-size: 58px;
+  line-height: 1.05;
+}
+
+/* Project detail hero title — overrides h1.title (same specificity, later in cascade) */
+.project-title {
+  font-size: 76px;
+  line-height: 0.92;
+  letter-spacing: -2px;
+}
+
+/* Slightly larger variant for shorter project names */
+.project-title-wide {
+  font-size: 72px;
+}
+
+/* Work intro on homepage */
+.home-work-intro {
+  padding: 100px 0 0;
+}
+
+.hwi-label {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #ff7210;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.hwi-statement {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 20px;
+  line-height: 1.65;
+  color: #111;
+  max-width: 620px;
+  font-weight: 300;
+  margin: 0;
+}
+
 @-webkit-keyframes spin {
   from {
     -webkit-transform: rotate(0deg);
