@@ -82,16 +82,16 @@
         var logo = $('.logo-load');
 
         loadTL
-            .to(block1, 0.5, {
+            .to(block1, 0.3, {
                 height: '0',
                 delay: '0'
             })
-            .to(block2, 0.5, {
+            .to(block2, 0.3, {
                 height: '0',
             })
             .to(logo, 0, {
                 autoAlpha: 0,
-                delay: '-0.4',
+                delay: '-0.3',
             })
 
         loadTL.play();
@@ -104,16 +104,16 @@
         var logo = $('.logo-load');
 
         loadTL
-            .to(block1, 0.5, {
+            .to(block1, 0.3, {
                 height: '100%',
                 delay: '0'
             })
-            .to(block2, 0.5, {
+            .to(block2, 0.3, {
                 height: '100%',
             })
             .to(logo, 0, {
                 autoAlpha: 1,
-                delay: '-0.5'
+                delay: '-0.3'
             })
 
         loadTL.play();
@@ -123,7 +123,7 @@
         e.preventDefault();
         setTimeout(function (url) {
             window.location = url
-        }, 1000, this.href);
+        }, 650, this.href);
         HideLoad();
     });
 
@@ -183,7 +183,7 @@
 
     luxy.init({
         wrapper: '#spiral',
-        wrapperSpeed: '0.07',
+        wrapperSpeed: '0.14',
     });
 
     //--------------------------------------------------
@@ -411,43 +411,42 @@
     var t1 = new TimelineMax({
         paused: true
     });
-    t1.to(".one", 0.8, {
+    t1.to(".one", 0.3, {
         y: 9,
         autoAlpha: 0,
         ease: Expo.easeInOut
     });
-    t1.to(".two", 0.8, {
+    t1.to(".two", 0.3, {
         ease: Expo.easeInOut,
-        delay: -1
+        delay: -0.3
     });
-    t1.to(".tre", 0.8, {
+    t1.to(".tre", 0.3, {
         y: -9,
         autoAlpha: 0,
         ease: Expo.easeInOut,
-        delay: -1
+        delay: -0.3
     });
-    t1.to(".over-all", 1, {
+    t1.to(".over-all", 0.4, {
         autoAlpha: 1,
         ease: Expo.easeOut,
     })
-    t1.to(".bg-nav", 1, {
+    t1.to(".bg-nav", 0.4, {
         autoAlpha: 1,
         ease: Power4.easeOut,
-        delay: -1
+        delay: -0.4
     })
 
-
-    t1.to(".menu", 1, {
+    t1.to(".menu", 0.4, {
         autoAlpha: 1,
         ease: Expo.easeOut,
-        delay: -1
+        delay: -0.4
     })
 
-    t1.staggerFrom(".menu ul li", 3, {
-        y: 50,
+    t1.staggerFrom(".menu ul li", 0.45, {
+        y: 30,
         opacity: 0,
-        ease: Power4.easeInOut,
-    }, '0.1', '-0.01');
+        ease: Power4.easeOut,
+    }, '0.07', '-0.1');
 
 
     t1.reverse();
