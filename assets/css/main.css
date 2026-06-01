@@ -1020,8 +1020,8 @@ h1.title {
 
 /* Homepage hero title — responsive via CSS, not inline style */
 .home-hero-title {
-  font-size: 58px;
-  line-height: 1.05;
+  font-size: 52px;
+  line-height: 1.0;
 }
 
 /* Project detail hero title — overrides h1.title (same specificity, later in cascade) */
