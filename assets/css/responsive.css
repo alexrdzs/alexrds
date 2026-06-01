@@ -251,7 +251,7 @@
 
 /* Tablet and below */
 @media (max-width: 991.98px) {
-  .home-hero-title { font-size: 42px; }
+  .home-hero-title { font-size: 60px; }
   .project-title   { font-size: 52px; }
   .project-title-wide { font-size: 50px; }
   .pp-title        { font-size: 58px; }
@@ -261,7 +261,7 @@
 
 /* Mobile */
 @media (max-width: 767.98px) {
-  .home-hero-title { font-size: 32px; }
+  .home-hero-title { font-size: 52px; }
   .project-title   { font-size: 40px; letter-spacing: -1px; }
   .project-title-wide { font-size: 38px; letter-spacing: -1px; }
   .pp-title        { font-size: 44px; }
@@ -277,7 +277,7 @@
 
 /* Small phones */
 @media (max-width: 575.98px) {
-  .home-hero-title { font-size: 26px; }
+  .home-hero-title { font-size: 40px; }
   .project-title   { font-size: 32px; }
   .project-title-wide { font-size: 30px; }
   .pp-title        { font-size: 36px; }
