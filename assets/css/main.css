@@ -1896,4 +1896,632 @@ h3.glp {
 h3.lght {
   color: #ffffff;
 }
+
+/* =================================================
+   HOME REVAMP STYLES
+   ================================================= */
+
+/* Brand/credentials ticker */
+.home-ticker {
+  overflow: hidden;
+  background: #000;
+  padding: 13px 0;
+}
+
+.ticker-inner {
+  display: inline-flex;
+  animation: ticker-scroll 32s linear infinite;
+  white-space: nowrap;
+}
+
+.home-ticker:hover .ticker-inner {
+  animation-play-state: paused;
+}
+
+.ticker-inner span {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  padding: 0 22px;
+  flex-shrink: 0;
+}
+
+.ticker-inner .ticker-brand {
+  color: rgba(255,255,255,0.9);
+}
+
+.ticker-inner .ticker-accent {
+  color: #ff7210;
+  padding: 0 4px;
+}
+
+@keyframes ticker-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* Hero subtitle elements (inside heading-text-front) */
+.hero-sub {
+  margin-top: 30px;
+}
+
+.hero-sub .hero-name {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #000;
+  display: block;
+  -webkit-text-stroke: 0px;
+}
+
+.hero-sub .hero-tagline {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #999;
+  display: block;
+  margin-top: 10px;
+  -webkit-text-stroke: 0px;
+}
+
+/* Featured case study cards on homepage */
+.home-featured {
+  padding: 80px 0 0;
+}
+
+.home-featured .featured-label {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 10px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #ff7210;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 40px;
+}
+
+/* Project index list */
+.project-index {
+  padding: 60px 0 80px;
+}
+
+.project-index-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-bottom: 18px;
+  border-bottom: 2px solid #000;
+  margin-bottom: 0;
+}
+
+.project-index-header .pih-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-size: 34px;
+  text-transform: uppercase;
+  color: #000;
+  margin: 0;
+}
+
+.project-index-header .pih-title span {
+  color: transparent;
+  -webkit-text-stroke: 1px #000;
+}
+
+.see-all-cta {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #ff7210;
+  text-decoration: none;
+  transition: opacity 0.25s ease;
+}
+
+.see-all-cta:hover {
+  opacity: 0.7;
+}
+
+.project-list-row {
+  display: flex;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.07);
+  text-decoration: none;
+  cursor: none;
+  position: relative;
+}
+
+.project-list-row::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #ff7210;
+  transition: width 0.45s ease;
+}
+
+.project-list-row:hover::after {
+  width: 100%;
+}
+
+.project-list-row:hover .plr-title {
+  color: #ff7210;
+}
+
+.project-list-row:hover .plr-num {
+  color: #ff7210;
+}
+
+.plr-num {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  color: #ddd;
+  letter-spacing: 2px;
+  width: 34px;
+  flex-shrink: 0;
+  transition: color 0.3s ease;
+}
+
+.plr-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-size: 17px;
+  color: #000;
+  flex: 1;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+  padding-right: 12px;
+}
+
+.plr-client {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 11px;
+  color: #999;
+  width: 90px;
+  flex-shrink: 0;
+  text-align: right;
+}
+
+.plr-cat {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 10px;
+  color: #bbb;
+  letter-spacing: 0.5px;
+  width: 150px;
+  flex-shrink: 0;
+  text-align: right;
+}
+
+.plr-year {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  color: #ccc;
+  letter-spacing: 2px;
+  width: 56px;
+  flex-shrink: 0;
+  text-align: right;
+}
+
+/* About section - revamped copy container */
+.abt-text h4 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.35;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.abt-text h4 span {
+  color: #ff7210;
+}
+
+/* =================================================
+   WORK REVAMP — Editorial Portfolio Styles
+   ================================================= */
+
+/* Dark hero variant for project pages */
+.main-head.dark-hero {
+  background: #0a0a0a;
+}
+
+.main-head.dark-hero .heading-text-front h1 {
+  -webkit-text-stroke: 1px rgba(255,255,255,0.55);
+}
+
+.main-head.dark-hero .heading-text-back h1 {
+  color: #111;
+  -webkit-text-stroke: 0px;
+}
+
+/* Work page intro text */
+.work-intro {
+  padding: 80px 0 20px;
+}
+
+.work-intro .intro-label {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 11px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #ff7210;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 24px;
+}
+
+.work-intro p {
+  font-size: 18px;
+  line-height: 1.8;
+  max-width: 580px;
+  color: #333;
+}
+
+/* Work grid */
+.work-grid {
+  padding: 40px 0 100px;
+}
+
+/* Individual work card */
+.work-card {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.work-card .card-number {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: #bbb;
+  font-weight: 600;
+  margin-bottom: 14px;
+  display: block;
+}
+
+.work-card .card-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.work-card .card-image a {
+  display: block;
+  cursor: none;
+}
+
+.work-card .card-image img {
+  filter: grayscale(100%);
+  transition: filter .9s ease, transform 1.1s ease;
+  width: 100%;
+  display: block;
+}
+
+.work-card:hover .card-image img {
+  filter: grayscale(0%);
+  transform: scale(1.04);
+}
+
+.work-card .card-tag {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 5;
+  background: #ff7210;
+  color: #fff;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  pointer-events: none;
+}
+
+.work-card .card-body {
+  padding: 18px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.work-card .card-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-size: 26px;
+  color: transparent;
+  -webkit-text-stroke: 1px #000;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1.15;
+  transition: color .4s ease;
+  margin: 0;
+}
+
+.work-card:hover .card-title {
+  color: #000;
+}
+
+.work-card .card-meta {
+  text-align: right;
+  flex-shrink: 0;
+  margin-left: 16px;
+}
+
+.work-card .card-year {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: #aaa;
+  letter-spacing: 2px;
+  display: block;
+  line-height: 1.4;
+}
+
+.work-card .card-role {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 11px;
+  color: #ccc;
+  letter-spacing: 0.5px;
+  display: block;
+}
+
+.work-card.offset-down {
+  margin-top: 120px;
+}
+
+/* Wide card (third row) */
+.work-card.card-wide .card-image img {
+  height: 420px;
+  object-fit: cover;
+}
+
+/* NDA strip */
+.nda-strip {
+  border-top: 1px solid rgba(0,0,0,0.1);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding: 26px 0;
+  margin: 20px 0 0;
+  text-align: center;
+}
+
+.nda-strip p {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #999;
+  margin: 0;
+}
+
+.nda-strip a {
+  color: #ff7210;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* =================================================
+   PROJECT DETAIL — New Layout
+   ================================================= */
+
+/* Full-width video section below hero */
+.project-video-section {
+  width: 100%;
+  background: #000;
+}
+
+.video-frame-wrap {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  background: #0a0a0a;
+}
+
+.video-frame-wrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Dark meta strip */
+.project-meta-strip {
+  background: #0a0a0a;
+  padding: 36px 0;
+}
+
+.project-meta-strip .row {
+  align-items: stretch;
+}
+
+.project-meta-strip .meta-col {
+  padding: 10px 36px;
+  border-right: 1px solid rgba(255,255,255,0.06);
+}
+
+.project-meta-strip .meta-col:first-child {
+  padding-left: 40px;
+}
+
+.project-meta-strip .meta-col:last-child {
+  border-right: none;
+}
+
+.project-meta-strip .meta-label {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 9px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #ff7210;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.project-meta-strip .meta-value {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  display: block;
+  line-height: 1.3;
+}
+
+/* Project overview / challenge */
+.project-overview {
+  padding: 100px 0 60px;
+}
+
+.project-section-label {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 10px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #ff7210;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 28px;
+}
+
+.project-pullquote {
+  font-family: 'Poppins', sans-serif;
+  font-size: 30px;
+  font-weight: 900;
+  font-style: italic;
+  line-height: 1.3;
+  margin-bottom: 44px;
+  color: transparent;
+  -webkit-text-stroke: 1px #000;
+}
+
+.project-pullquote em {
+  color: #000;
+  -webkit-text-stroke: 0px;
+  font-style: italic;
+}
+
+.project-body-copy {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.9;
+  color: #3a3a3a;
+}
+
+.project-body-copy p + p {
+  margin-top: 22px;
+}
+
+/* Image editorial blocks */
+.project-images {
+  padding: 20px 0 80px;
+}
+
+.project-img-block {
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.project-img-block img {
+  width: 100%;
+  display: block;
+  transition: transform 1s ease;
+}
+
+.project-img-block:hover img {
+  transform: scale(1.04);
+}
+
+.project-img-caption {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 11px;
+  color: #aaa;
+  letter-spacing: 1px;
+  margin-top: 10px;
+}
+
+/* Stat highlight block */
+.project-stat-block {
+  padding: 80px 0;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  margin: 40px 0 80px;
+}
+
+.project-stat-block .stat-number {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-size: 72px;
+  color: transparent;
+  -webkit-text-stroke: 1px #000;
+  line-height: 1;
+  letter-spacing: -2px;
+}
+
+.project-stat-block .stat-label {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #888;
+  margin-top: 10px;
+  display: block;
+}
+
+/* Credits section */
+.project-credits {
+  padding: 80px 0 100px;
+  border-top: 2px solid #000;
+}
+
+.project-credits .credits-heading {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 10px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #aaa;
+  font-weight: 700;
+  margin: 0 0 50px;
+}
+
+.credit-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.07);
+}
+
+.credit-row .credit-role {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #bbb;
+}
+
+.credit-row .credit-name {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+}
+
+.credit-row .credit-name.is-me {
+  color: #ff7210;
+}
+
 /*# sourceMappingURL=main.css.map */
